@@ -72,11 +72,11 @@ jobs:
         run: ./gradlew build --stacktrace
 
       - name: Create Paperclip Jar
-        if: fromJSON(steps.determine.outputs.result).action == 'paperclip'
+        # if: fromJSON(steps.determine.outputs.result).action == 'paperclip'
         run: ./gradlew createReobfPaperclipJar --stacktrace
 
       - name: Upload Paperclip Jar
-        if: fromJSON(steps.determine.outputs.result).action == 'paperclip'
+        # if: fromJSON(steps.determine.outputs.result).action == 'paperclip'
         uses: actions/upload-artifact@v3
         with:
           name: paper-${{ fromJSON(steps.determine.outputs.result).pr }}
