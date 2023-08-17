@@ -75,7 +75,7 @@ index 3842caf61e388aa65b3a18c587480a7dabb8341b..bd7b8ede44a5971b034ffb75fbddbadd
          this.doCloseContainer();
      }
 diff --git a/src/main/java/net/minecraft/server/network/ServerGamePacketListenerImpl.java b/src/main/java/net/minecraft/server/network/ServerGamePacketListenerImpl.java
-index 3580ce27843ab4e379360e2f63c8783e66384956..b87df5c04ad2c9abe112cccfde27c04f7e3a78e7 100644
+index ba1d752653b3a8111a96012a51f2e4d8048c3516..d9f392623ec3527e1e481d890748c5eeb3e3fadb 100644
 --- a/src/main/java/net/minecraft/server/network/ServerGamePacketListenerImpl.java
 +++ b/src/main/java/net/minecraft/server/network/ServerGamePacketListenerImpl.java
 @@ -222,6 +222,7 @@ import org.bukkit.event.inventory.ClickType;
@@ -86,7 +86,7 @@ index 3580ce27843ab4e379360e2f63c8783e66384956..b87df5c04ad2c9abe112cccfde27c04f
  import org.bukkit.event.inventory.InventoryCreativeEvent;
  import org.bukkit.event.inventory.InventoryType.SlotType;
  import org.bukkit.event.inventory.SmithItemEvent;
-@@ -2681,10 +2682,15 @@ public class ServerGamePacketListenerImpl implements ServerPlayerConnection, Tic
+@@ -2682,10 +2683,15 @@ public class ServerGamePacketListenerImpl implements ServerPlayerConnection, Tic
  
      @Override
      public void handleContainerClose(ServerboundContainerClosePacket packet) {
@@ -144,7 +144,7 @@ index 734d00e84ec0bcef91a12546873de64e33e14d0c..c7bcbc3f0542a74c30e29bded3bfc0e9
          this.containerMenu = this.inventoryMenu;
      }
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftHumanEntity.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftHumanEntity.java
-index f59733b6918dcbbb2190f76d8b8841a2d8818cdf..ba6105a970381d642cd7955754cc47135207027a 100644
+index 74f1af3dccddf52965e5c91277be3592649e8cfa..552fb0be2f31bd52a5ae43526d55aa29828f786e 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftHumanEntity.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftHumanEntity.java
 @@ -376,7 +376,7 @@ public class CraftHumanEntity extends CraftLivingEntity implements HumanEntity {
@@ -173,10 +173,10 @@ index f59733b6918dcbbb2190f76d8b8841a2d8818cdf..ba6105a970381d642cd7955754cc4713
      @Override
      public boolean isBlocking() {
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
-index 8dee7e74434356885b81e2a36664f8324ceacf57..10493d2cced7603f1d3910ff6e428d23abc45c24 100644
+index 91eb7f4fb65fcaa4c953f9567971df243387816a..ef566466afb9665824e3f5c5c16a411cdf1abadc 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftPlayer.java
-@@ -1190,7 +1190,7 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
+@@ -1189,7 +1189,7 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
  
          // Close any foreign inventory
          if (this.getHandle().containerMenu != this.getHandle().inventoryMenu) {
